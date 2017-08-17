@@ -139,7 +139,8 @@ RCT_REMAP_METHOD(getPermissionStatus, getPermissionStatus:(RNPType)type json:(id
             status = [RNPSpeechRecognition getStatus];
             break;
         case RNPTypeMotion:
-            return [RNPMotion request:resolve]
+            [RNPMotion request:resolve];
+            return;
         default:
             break;
     }
@@ -173,7 +174,7 @@ RCT_REMAP_METHOD(requestPermission, permissionType:(RNPType)type json:(id)json r
         case RNPTypeSpeechRecognition:
             return [RNPSpeechRecognition request:resolve];
         case RNPTypeMotion:
-            return [RNPMotion request:resolve]
+            return [RNPMotion request:resolve];
         default:
             break;
     }

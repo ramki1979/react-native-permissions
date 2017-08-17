@@ -9,14 +9,9 @@
 #import "RNPMotion.h"
 #import <CoreMotion/CoreMotion.h>
 
-
-@interface RNPMotion()
-@property (copy) void (^completionHandler)(NSString *);
-@end
-
 @implementation RNPMotion
 
-+ (void)request:(NSString *)type completionHandler:(void (^)(NSString *))completionHandler
++ (void)request:(void (^)(NSString *))completionHandler;
 {
     CMMotionActivityManager* motionManager = [[CMMotionActivityManager alloc] init];
     
