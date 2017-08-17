@@ -15,6 +15,7 @@ const RNPTypes = [
 	'notification',
 	'backgroundRefresh',
 	'speechRecognition',
+	'motion'
 ]
 
 const DEFAULTS = {
